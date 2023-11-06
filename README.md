@@ -1,4 +1,17 @@
-## Directory Structure
+# E2EMap
+Artifact Evaluation Reproduction for "E2EMap: End-to-End Reinforcement Learning for CGRA Compilation via Reverse Mapping",HPCA 2024.
+
+## Table of contents
+1. [Directory Structure](#directory-structure)
+2. [Getting Started](#getting-started)
+    1. [Hardware pre-requisities](#hardware pre-requisities)
+    2. [Software pre-requisites](#software pre-requisites)
+    3. [Installation][#installation]
+    4. [Running example](#running-example)
+    5. [Modify the parameters](#modify-the-parameters)
+    6. [Data formats](#data-formats)
+
+# Directory Structure
 
 ```
 E2EMap
@@ -38,15 +51,15 @@ E2EMap
 ```
 
 # Getting started
-## Hardware pre-requisities:
+## Hardware pre-requisities
 * Ubuntu (we have tested Ubuntu 18.04)
 * GPU (we use GeForce RTX 2080 Ti)
 
-## Software pre-requisites:
+## Software pre-requisites
 * python3.7
 * tensorflow2.6.0
 
-## Installation:
+## Installation
 We use anaconda to deploy the environment
 ```
 conda create -n tf python=3.7
@@ -60,7 +73,7 @@ pip install scipy
 pip install pygmtools
 ```
 
-## Running Example:
+## Running Example
 You can use the following command to test
 ```
 bash run.sh demo
@@ -84,3 +97,23 @@ The following is an explanation of some key parameters
 * reward_mode(Indicates the CGRA structure, 1 indicates the mesh structure, 2 indicates the torus structure, 3 indicates the Diagonal structure, and 4 indicates the 1-Hop structure, and 5 indicates the 1-Hop+Diagonal+torus structure, 6 indicates the 1-Hop+torus structure)
 * max_LRF(the number of LRF resources in one FU)
 * max_GRF(the number of GRF resources in a time slot)
+
+## Data Formats
+Each line of the input file indicates a node in a DFG, which includes 13 segments defined as follows:
+```
+|----------|------------|-------------|------------|-------------|------------|-------------|------------|-------------|---------------------|-------------------|-------|---------------|
+|node index|child node 1|edge 1's type|child node 2|edge 2's type|child node 3|edge 3's type|child node 4|edge 4's type|earliest control step|latest control step|special|zero in-degree?|
+|----------|------------|-------------|------------|-------------|------------|-------------|------------|-------------|---------------------|-------------------|-------|---------------|
+```
+
+For example : \
+<img src="DFG.png" alt="drawing" width="100"/> \
+the input data file should be:
+```
+1,2,0,4,0,0,0,0,0,0,0,0,0
+2,3,0,0,0,0,0,0,0,1,1,0,1
+3,4,0,5,0,0,0,0,0,2,2,0,1
+4,5,0,0,0,0,0,0,0,3,3,0,1
+5,0,0,0,0,0,0,0,0,4,4,0,1
+6,3,0,0,0,0,0,0,0,0,1,0,0
+```
