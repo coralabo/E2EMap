@@ -85,6 +85,9 @@ bash reward_mode4.sh
 ```
 The adi and h2v2 operators have been taken out separately, as their experimental time is relatively long. You can test them through script run_adi_and_h2v2.sh.
 
+## Experiment workflow
+All experimental scripts are located under the script folder, and you can find the corresponding experiments for each script in the [Directory Structure](#directory-structure) section.
+
 ## Modify the parameters
 If you want to modify the parameters of the code, open the script file and modify the specified parameter information
 The following is an explanation of some key parameters
