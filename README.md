@@ -4,8 +4,8 @@ Artifact Evaluation Reproduction for "E2EMap: End-to-End Reinforcement Learning 
 ## Table of contents
 1. [Directory Structure](#directory-structure)
 2. [Getting Started](#getting-started)
-    1. [Hardware pre-requisities](#hardware pre-requisities)
-    2. [Software pre-requisites](#software pre-requisites)
+    1. [Hardware pre-requisities](#hardware-pre-requisities)
+    2. [Software pre-requisites](#software-pre-requisites)
     3. [Installation][#installation]
     4. [Running example](#running-example)
     5. [Modify the parameters](#modify-the-parameters)
