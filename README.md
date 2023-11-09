@@ -121,3 +121,16 @@ the input data file should be:
 5,0,0,0,0,0,0,0,0,4,4,0,1
 6,3,0,0,0,0,0,0,0,0,1,0,0
 ```
+# Reference
+
+```
+@inproceedings{liu2024e2emap,
+  title={E2EMap: End-to-End Reinforcement Learning for CGRA Compilation via Reverse Mapping},
+  author={Dajiang, Liu and Xia, Yuxin and Shang, Jiaxing and Zhong, Jiang and Ouyang, Peng and Yin, Shouyi},
+  booktitle={IEEE International Symposium on High-Performance Computer Architecture (HPCA)},
+  pages={1--15},
+  year={2024}
+}
+```
+
+
