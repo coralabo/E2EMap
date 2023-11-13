@@ -123,5 +123,21 @@ the input data file should be:
 6,3,0,0,0,0,0,0,0,0,1,0,0
 ```
 
+
 # Troubleshooting
 If there is a problem like "tensorflow.python.framework.errors_impl.InternalError: Blas GEMM launch failed",it should be not enough gpu memory.Our python program has a memory footprint of around 2G, and one script runs four python programs. You can adjust it according to the actual gpu memory size of the server.You can adjust the "wait" position in the script.
+
+# Reference
+
+```
+@inproceedings{liu2024e2emap,
+  title={E2EMap: End-to-End Reinforcement Learning for CGRA Compilation via Reverse Mapping},
+  author={Dajiang, Liu and Xia, Yuxin and Shang, Jiaxing and Zhong, Jiang and Ouyang, Peng and Yin, Shouyi},
+  booktitle={IEEE International Symposium on High-Performance Computer Architecture (HPCA)},
+  pages={1--15},
+  year={2024}
+}
+```
+
+
+
