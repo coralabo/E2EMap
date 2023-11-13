@@ -11,6 +11,7 @@ Artifact Evaluation Reproduction for "E2EMap: End-to-End Reinforcement Learning 
     5. [Experiment workflow](#Experiment-workflow)
     6. [Modify the parameters](#modify-the-parameters)
     7. [Data formats](#data-formats)
+3.[Troubleshooting](#troubleshooting)
 
 # Directory Structure
 
@@ -121,3 +122,6 @@ the input data file should be:
 5,0,0,0,0,0,0,0,0,4,4,0,1
 6,3,0,0,0,0,0,0,0,0,1,0,0
 ```
+
+# Troubleshooting
+If there is a problem like "tensorflow.python.framework.errors_impl.InternalError: Blas GEMM launch failed",it should be not enough gpu memory.Our python program has a memory footprint of around 2G, and one script runs four python programs. You can adjust it according to the actual gpu memory size of the server.You can adjust the "wait" position in the script.
