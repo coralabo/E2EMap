@@ -11,7 +11,7 @@ Artifact Evaluation Reproduction for "E2EMap: End-to-End Reinforcement Learning 
     5. [Experiment workflow](#Experiment-workflow)
     6. [Modify the parameters](#modify-the-parameters)
     7. [Data formats](#data-formats)
-3.[Troubleshooting](#troubleshooting)
+3. [Troubleshooting](#troubleshooting)
 
 # Directory Structure
 
